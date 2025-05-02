@@ -90,27 +90,25 @@ export default function StudentDailyJournalTableView(props) {
     <>
       {Object.keys(data).length == 0 && (
         <div className="flex flex-col items-center justify-center">
-          {tanggal == today ? (
-            <div className="text-center">
-              <AddDataFirst />
-              <h3 className="text-xl text-black font-bold mb-5 dark:text-white">
-                Opps! Kamu belum submit jurnal hari ini!
-              </h3>
-              <StudentDailyJournalAddDrawerView
-                handleDataHarian={handleDataHarian}
-                setConfetti={setConfetti}
-                id="0"
-              />
-              <p className="mt-5">Ganti Tanggal:</p>
-            </div>
-          ) : (
-            <div className="text-center">
-              <NotFound />
-              <h3 className="text-xl text-black font-bold mb-5 dark:text-white">
-                Opps! Tidak ada jurnal yang kamu submit di tanggal ini.
-              </h3>
-              <p>Ganti Tanggal:</p>
-            </div>
+          <div className="text-center">
+            <AddDataFirst />
+            <h3 className="text-xl text-black font-bold mb-5 dark:text-white">
+              Opps! Kamu belum submit jurnal hari ini!
+            </h3>
+            <StudentDailyJournalAddDrawerView
+              handleDataHarian={handleDataHarian}
+              setConfetti={setConfetti}
+              id="0"
+            />
+            <p className="mt-5">Ganti Tanggal:</p>
+          </div>
+          <div className="text-center">
+            <NotFound />
+            <h3 className="text-xl text-black font-bold mb-5 dark:text-white">
+              Opps! Tidak ada jurnal yang kamu submit di tanggal ini.
+            </h3>
+            <p>Ganti Tanggal:</p>
+          </div>
           )}
         </div>
       )}

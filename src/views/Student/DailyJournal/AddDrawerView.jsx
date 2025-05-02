@@ -169,7 +169,7 @@ export default function StudentDailyJournalAddDrawerView(props) {
                   id="hari"
                   onChange={(e) => setHari(e.value)}
                   defaultValue={opsiHari.find(({ value }) => value === hari)}
-                  isDisabled={true}
+                  isDisabled={false}
                 />
               )}
               <Input
@@ -181,7 +181,7 @@ export default function StudentDailyJournalAddDrawerView(props) {
                 value={tanggal}
                 onChange={(e) => setTanggal(e.target.value)}
                 required={true}
-                isDisabled={true}
+                isDisabled={false}
               />
               <SelectInput
                 options={opsiJenisPekerjaan}
